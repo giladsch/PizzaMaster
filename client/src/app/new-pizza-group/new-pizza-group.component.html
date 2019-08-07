@@ -1,0 +1,32 @@
+<div class="newGroup">
+    <div class="header">
+        <h3>יצירת קבוצה חדשה</h3>
+    </div>
+    
+    <mat-form-field>
+            <input [(ngModel)]="groupName" matInput type="text" placeholder="שם קבוצה">
+    </mat-form-field>
+
+    <div>
+        <div>מספר משולשים התחלתי:</div>
+        <igx-slider id="slider" [minValue]="1" [maxValue]="8" [continuous]=true [(ngModel)]="startNumberOfSlices" ></igx-slider>
+    </div>
+
+    <div>
+        <div>מיקום:</div>
+
+        <div>{{userService.GetCurrentUser().location}}</div>
+    </div>
+
+    <div class="kosherContainer">
+        <div>כשרות</div>
+        <mat-checkbox [(ngModel)]="isKosher">
+        </mat-checkbox>
+    </div>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatepicker">
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+</div>
