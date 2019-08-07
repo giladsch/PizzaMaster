@@ -6,7 +6,7 @@ import {cloneDeep} from 'lodash'
 export class UserService {
 
   constructor() {}
-  private initialized = false;
+  public Initialized = false;
 
   private currentUser: IUser ={
     name: "",
@@ -18,12 +18,12 @@ export class UserService {
   public InitUser(name: string, location: LocationsEnum){
     this.currentUser.name = name;
     this.currentUser.location = location;
-    this.initialized = true;
+    this.Initialized = true;
     console.log("connected:");
     console.log(this.currentUser);
   }
 
-  private GetCurrentUser(){
+  public GetCurrentUser(): IUser{
     this.isInitialized();
     return cloneDeep(this.currentUser);
   }
