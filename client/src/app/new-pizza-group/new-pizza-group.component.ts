@@ -14,10 +14,24 @@ export class NewPizzaGroupComponent implements OnInit {
   groupName : string;
 
   constructor(private userService: UserService) {
-     this.userLocation = userService.GetCurrentUser().location;
   }
 
   ngOnInit() {
   }
 
+  public getLocationHebrewName(englishName: string) {
+    if (englishName == "PazGaz") {
+      return "פז גז"; 
+    }
+
+    if (englishName == "Mifkada") {
+      return "מפקדה"; 
+    }
+
+    if (englishName == "Eged") {
+      return "אגד"; 
+    }
+
+    return "סהר עשה פאדיחה :)";
+  }
 }

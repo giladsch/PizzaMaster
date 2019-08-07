@@ -59,7 +59,6 @@ export class GroupsService {
 
   public getSlicesNum(group: IGroup): number{
     const x = group.buyingUsers.reduce((accumulator, currentValue) => accumulator + currentValue.slices, 0);
-    console.log(x);
     return x
   }
 }
