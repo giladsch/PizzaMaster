@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {LocationsEnum, UserService} from '../user.service';
 
 @Component({
   selector: 'app-user',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
-  public  options = ["fdfd","fdfdfdd"];
+  constructor(private userService: UserService) { }
   ngOnInit() {
 
   }
+
+  name: string;
+  location: LocationsEnum;
+
+  public Connect(){
+    this.userService.InitUser(this.name, this.location)
+
+  }
+
 
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import {AngularMatImports} from './angular-mat-imports.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import {AngularMatImports} from './angular-mat-imports.module';
     UserComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,AngularMatImports
   ],
   providers: [],
