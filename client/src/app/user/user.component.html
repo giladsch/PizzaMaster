@@ -1,0 +1,17 @@
+<div class="login-container" *ngIf="!userService.Initialized">
+
+  <mat-form-field>
+    <input [(ngModel)]="name" matInput type="text" placeholder="שם מלא">
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-select [(ngModel)]="location" placeholder="בחר אזור">
+      <mat-option value="PazGaz">פז גז</mat-option>
+      <mat-option value="Mifkada">מפקדה</mat-option>
+      <mat-option value="Eged">אגד</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button (click)="Connect()">התחבר</button>
+
+
+</div>
