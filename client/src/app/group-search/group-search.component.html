@@ -1,14 +1,21 @@
 <div class="group-list-container">
+  <div *ngFor="let group of groupService.getGroups()">
+    <button class="group-button" mat-button mat-raised-button matTooltip="הצטרף לקבוצה" [disabled]="(groupService.getSlicesNum(group) + sliceRange.lower)>8">
+      <div>{{group.name}}</div>
+      <div class="group-slices"> {{groupService.getSlicesNum(group)}}/8</div>
+    </button>
+  </div>
 </div>
 
 <div class="group-header-container">
-  <h1>שלום {{userService.GetCurrentUser().name}}</h1>
+  <div class="name-container">
+    <span>שלום {{userService.GetCurrentUser().name}}</span>
+  </div>
+  <span>כמה חתיכות תרצה?</span>
 
-  <div class="container">
-    <div class="container">
-      <igx-slider id="slider" [type]="sliderType.RANGE" [minValue]="1" [maxValue]="10" [lowerBound]="1" [upperBound]="10" [(ngModel)]="sliceRange"></igx-slider>
-      <igx-slider id="slide2r" [minValue]="0" [maxValue]="100" [continuous]=true [(ngModel)]="volume" ></igx-slider>
-
+  <div class="slider-container">
+    <div>
+      <igx-slider id="slider" [type]="sliderType.RANGE" [minValue]="1" [maxValue]="7" [lowerBound]="1" [upperBound]="10" [(ngModel)]="sliceRange"></igx-slider>
     </div>
   </div>
 </div>

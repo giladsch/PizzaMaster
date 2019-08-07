@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {SliderType} from 'igniteui-angular';
+import {GroupsService} from '../groups.service';
 
 @Component({
   selector: 'app-group-search',
@@ -9,7 +10,7 @@ import {SliderType} from 'igniteui-angular';
 })
 export class GroupSearchComponent implements OnInit {
 
-  constructor(public userService: UserService) { }
+  constructor(public userService: UserService, public groupService: GroupsService) { }
   public sliderType = SliderType;
   public sliceRange = {
     lower: 2,
