@@ -8,7 +8,7 @@ export class UserService {
   constructor() {}
   public Initialized = false;
 
-  private currentUser: IUser ={
+  public currentUser: IUser ={
     name: "",
     location: null
   };

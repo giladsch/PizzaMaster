@@ -28,6 +28,7 @@
     "jszip": "^3.1.5",
     "lodash": "^4.17.15",
     "oracledb": "^4.0.0",
+    "paper-range-slider": "^3.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "web-animations-js": "^2.3.2",
