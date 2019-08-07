@@ -6,7 +6,14 @@
     <!-- Login Form -->
     <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="שם מלא">
-      <mat-list></mat-list>
+      <mat-form-field>
+        <!--<mat-label>Favorite food</mat-label>-->
+        <mat-select>
+          <mat-option *ngFor="let food of options" [value]="food">
+            {{food}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
 
