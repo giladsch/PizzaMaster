@@ -1,4 +1,4 @@
-<div class="login-container">
+<div class="login-container" *ngIf="!userService.Initialized">
 
   <mat-form-field>
     <input [(ngModel)]="name" matInput type="text" placeholder="שם מלא">

@@ -40,7 +40,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   exports: [
@@ -86,7 +86,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
   ]
 })
 export class AngularMatImports {}
