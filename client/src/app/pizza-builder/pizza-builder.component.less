@@ -1,0 +1,118 @@
+@pizza-size: 550px;
+
+.pizzaContainer {
+    height: @pizza-size;
+    width: @pizza-size;
+    position: relative;
+    background-image: url("../../assets/wood.jpg");
+  }
+  
+  .pizzaBackground {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 8px rgba(14, 14, 14, 0.51);
+  } 
+  
+  .pizza {
+    transition: all 1s;
+    position: absolute;
+    width: @pizza-size;
+    height: @pizza-size;
+    border-radius: 100%;
+    clip: rect(0px, @pizza-size / 2, @pizza-size, 0px);
+  }
+  
+  .hold {
+    position: absolute;
+    width: @pizza-size;
+    height: @pizza-size;
+    border-radius: 100%;
+    clip: rect(0px, @pizza-size, @pizza-size, @pizza-size / 2);
+  }
+  
+  .pizza {
+      transform: rotate(45deg);
+  }
+  
+//   #pizzaSlice1 .pizza {
+//     background-color: midnightblue;
+//   }
+  
+//   #pizzaSlice2 .pizza {
+//     background-color: aquamarine;
+//   }
+  
+  #pizzaSlice2 {
+    transform: rotate(45deg);
+  }
+  
+//   #pizzaSlice3 .pizza {
+//     background-color: bisque;
+//   }
+  
+  #pizzaSlice3 {
+    transform: rotate(90deg);
+  }
+
+//   #pizzaSlice4 .pizza {
+//     background-color: chocolate;
+//   }
+
+  #pizzaSlice4 {
+    transform: rotate(135deg);
+  }
+  
+//   #pizzaSlice5 .pizza {
+//     background-color: darkblue;
+//   }
+  
+  #pizzaSlice5 {
+    transform: rotate(180deg);
+  }
+  
+//   #pizzaSlice6 .pizza {
+//     background-color: darkorchid;
+//   }
+  
+  #pizzaSlice6 {
+    transform: rotate(225deg);
+  }
+
+//   #pizzaSlice7 .pizza {
+//     background-color: firebrick;
+//   }
+
+  #pizzaSlice7 {
+    transform: rotate(270deg);
+  }
+
+//   #pizzaSlice8 .pizza {
+//     background-color: hotpink;
+//   }
+
+  #pizzaSlice8 {
+    transform: rotate(315deg);
+  }
+  
+  .innerCircle {
+    position: absolute;
+    width: @pizza-size - 50px;
+    height: @pizza-size - 50px;
+    background-image: url(../../assets/pizza.png);
+    background-size: @pizza-size - 50px;
+    border-radius: 100%;
+    top: 18px;
+    left: 28px;
+    color: white;
+  }
+  .innerCircle .content {
+    position: absolute;
+    display: block;
+    width: @pizza-size - 50px;
+    top: 50px;
+    left: 0;
+    text-align: center;
+    font-size: 14px;
+  }
