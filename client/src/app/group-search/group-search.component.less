@@ -18,11 +18,17 @@
   left: 0;
   margin: 0 !important;
   bottom: 0;
-  background-color: aqua;
 
   .group-button {
-    width: 100%;
+    background-color: #b08d8de3;
+    border-radius: 5px;
+    margin: 2px;
+    width: 90%;
     padding: 10px;
+
+    &:disabled {
+      background-image: repeating-linear-gradient(145deg, black, black 1px, #b08d8de3 1px, #b08d8de3 9px);
+    }
 
     .group-slices {
       font-size: 40px;

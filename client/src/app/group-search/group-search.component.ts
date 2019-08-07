@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {SliderType} from 'igniteui-angular';
-import {GroupsService} from '../groups.service';
+import {GroupsService, IGroup} from '../groups.service';
 
 @Component({
   selector: 'app-group-search',
@@ -16,6 +16,11 @@ export class GroupSearchComponent implements OnInit {
     lower: 2,
     upper: 3
   };
+
+  public JoinToGroup(group:IGroup){
+    this.groupService.JoinToGroup(group,this.userService.GetCurrentUser(),this.sliceRange.upper)
+  }
+
   public volume = 4;
   ngOnInit() {
   }

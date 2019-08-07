@@ -9,13 +9,15 @@ import { GroupSearchComponent } from './group-search/group-search.component';
 import { IgxInputGroupModule, IgxSliderModule } from 'igniteui-angular';
 import { NewPizzaGroupComponent } from './new-pizza-group/new-pizza-group.component';
 import { MatSliderModule } from '@angular/material';
+import { PizzaLoaderComponent } from './pizza-loader/pizza-loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     GroupSearchComponent,
-    NewPizzaGroupComponent
+    NewPizzaGroupComponent,
+    PizzaLoaderComponent
   ],
   imports: [
     MatSliderModule,

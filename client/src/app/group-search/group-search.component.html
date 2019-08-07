@@ -1,7 +1,7 @@
 <div *ngIf="userService.Initialized">
   <div class="group-list-container">
     <div *ngFor="let group of groupService.getGroups()">
-      <button class="group-button" mat-button mat-raised-button matTooltip="הצטרף לקבוצה" [disabled]="(groupService.getSlicesNum(group) + sliceRange.lower)>8">
+      <button (click)="JoinToGroup(group)" class="group-button" mat-button mat-raised-button matTooltip="הצטרף לקבוצה" [disabled]="(groupService.getSlicesNum(group) + sliceRange.lower)>8">
         <div>{{group.name}}</div>
         <div class="group-slices"> {{groupService.getSlicesNum(group)}}/8</div>
       </button>
