@@ -18,6 +18,8 @@ export class GroupsService {
     return this.isGroupSelected;
   }
   public JoinToGroup(group: IGroup, user: IUser, slices: number):number{
+    this.userService.IsLoading = true;
+
     let used = slices;
     let slicesLeft = 8 - this.getSlicesNum(group) - slices;
     if(slicesLeft < 0){
