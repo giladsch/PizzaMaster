@@ -1,0 +1,45 @@
+<div class="newGroup">
+  <div style="margin: 5%;">
+    <div class="header" style="text-align: center">
+      <h3>יצירת קבוצה חדשה</h3>
+    </div>
+
+    <div class="groupNameContainer"  >
+      <b style="width: 100%">שם קבוצה:</b>
+      <input placeholder="שם הקבוצה" matInput [(ngModel)]="groupName" class="groupNameInput">
+    </div>
+
+    <div class="sliderContainer">
+      <b class="sliderHeader" >מספר משולשים התחלתי:</b>
+      <div class="sliderLine">
+        <igx-slider id="slider" [minValue]="1" [maxValue]="800" [continuous]=true [(ngModel)]="startNumberOfSlices" ></igx-slider>
+      </div>
+    </div>
+    <div class="fieldsContainer">
+      <div class="locationContainer">
+        <b>מיקום:</b>
+        <div class="location">{{getLocationHebrewName(userService.GetCurrentUser().location)}}</div>
+      </div>
+
+      <div class="kosherContainer">
+        <b>כשרות:</b>
+        <mat-checkbox class="kosherCheckBox" [(ngModel)]="isKosher">
+        </mat-checkbox>
+      </div>
+
+      <div class="expirationDateContainer">
+        <b>תאריך סיום:</b>
+        <mat-form-field class="expirationDate">
+          <input matInput [matDatepicker]="myDatepicker">
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <button mat-button mat-raised-button class="confirmButton" (click)="Create()">צור</button>
+      </div>
+    </div>
+  </div>
+
+</div>

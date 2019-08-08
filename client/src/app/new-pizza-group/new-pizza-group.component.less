@@ -1,0 +1,80 @@
+mat-slider {
+  width: 300px;
+}
+
+
+.newGroup {
+  background-color: #ffffff80;
+
+  border: 2px solid black;
+  border-radius: 10px;
+  // width: 75%;
+
+  .header {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .groupNameContainer {
+    display: inline-flex;
+
+    .groupNameInput {
+      margin-right: 10px;
+      border-top-width: 0px;
+      border-right-width: 0px;
+      border-left-width: 0px;
+    }
+  }
+
+  .kosherContainer {
+    display: inline-flex;
+
+    .kosherCheckBox {
+      margin-right: 10px;
+    }
+  }
+
+  .sliderContainer {
+    width: 100%;
+    
+    .sliderHeader {
+      width: 25%;
+    }
+
+    .sliderLine {
+      margin-right: 24%;
+      width: 50%;
+      height: 10px;
+    }
+  }
+
+  .fieldsContainer {
+    flex-direction: column;
+    display: flex; 
+  }
+
+  .locationContainer {
+    display: inline-flex;
+
+    .location {
+      margin-right: 10px;
+    }
+  }
+
+  .expirationDateContainer {
+    display: inline-flex;
+    align-items: baseline;
+
+    .expirationDate {
+      margin-right: 10px;
+    }
+  }
+
+  .confirmButton {
+    background-color: #106cc8;
+    width: 25%;
+    align-self: flex-end;
+    float: left;
+    opacity: 0.8;
+  }
+}

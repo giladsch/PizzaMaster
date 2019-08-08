@@ -1,0 +1,31 @@
+<div *ngIf="userService.Initialized && !groupService.IsGroupSelcted()">
+  <div class="group-list-container">
+    <div *ngFor="let group of groupService.getGroups()">
+      <button (click)="JoinToGroup(group)" class="group-button" mat-button mat-raised-button matTooltip="הצטרף לקבוצה" [disabled]="(groupService.getSlicesNum(group) + sliceRange.lower)>8">
+        <div>{{group.name}}</div>
+        <div class="group-slices"> {{groupService.getSlicesNum(group)}}/8</div>
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="group-header-container">
+    <div class="name-container">
+      <span>שלום {{userService.GetCurrentUser().name}}</span>
+    </div>
+    <span>כמה חתיכות תרצה?</span>
+    
+    <div class="slider-container">
+      <div>
+        <igx-slider id="slider" [type]="sliderType.RANGE" [minValue]="1" [maxValue]="7" [lowerBound]="1" [upperBound]="10" [(ngModel)]="sliceRange"></igx-slider>
+      </div>
+    </div>
+  </div>
+
+  <div class="new-group-component">
+    <app-new-pizza-group></app-new-pizza-group>
+  </div>
+</div>
+
+
+

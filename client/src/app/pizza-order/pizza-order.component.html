@@ -1,0 +1,10 @@
+<div *ngIf="groupService.IsGroupSelcted()" style="height: 100%;width: 100%">
+  <ul>
+    <li *ngFor="let user of groupService.SelectedGroup.buyingUsers">
+      <span>{{user.name}}</span>
+      <span>{{user.slices}}</span>
+    </li>
+  </ul>
+
+  <app-pizza-slices-left style=" position: absolute; height: 30%; width: 10%; top: 40%; right: 40%"></app-pizza-slices-left>
+</div>

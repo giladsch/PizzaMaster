@@ -1,0 +1,18 @@
+<div class="login-container" *ngIf="!userService.Initialized && !userService.IsLoading">
+
+  <div class="systemNameHeader">PIZZA MASTER</div>
+  <mat-form-field>
+    <input [(ngModel)]="name" matInput type="text" placeholder="שם מלא">
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-select [(ngModel)]="location" placeholder="בחר אזור">
+      <mat-option value="PazGaz">פז גז</mat-option>
+      <mat-option value="Mifkada">מפקדה</mat-option>
+      <mat-option value="Eged">אגד</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button mat-raised-button class="login-button" (click)="Connect()">התחבר</button>
+
+</div>
+<app-pizza-loader *ngIf="userService.GetIsLoading()"></app-pizza-loader>
