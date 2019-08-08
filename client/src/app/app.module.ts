@@ -12,6 +12,7 @@ import { MatSliderModule } from '@angular/material';
 import { PizzaLoaderComponent } from './pizza-loader/pizza-loader.component';
 import { PizzaOrderComponent } from './pizza-order/pizza-order.component';
 import { PizzaSlicesLeftComponent } from './pizza-slices-left/pizza-slices-left.component';
+import { PizzaBuilderComponent } from './pizza-builder/pizza-builder.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PizzaSlicesLeftComponent } from './pizza-slices-left/pizza-slices-left.
     NewPizzaGroupComponent,
     PizzaLoaderComponent,
     PizzaOrderComponent,
-    PizzaSlicesLeftComponent
+    PizzaSlicesLeftComponent,
+    PizzaBuilderComponent
   ],
   imports: [
     MatSliderModule,

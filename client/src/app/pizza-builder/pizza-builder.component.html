@@ -1,0 +1,6 @@
+<div class="pizzaContainer">
+    <div class="pizzaBackground"></div>    
+    <div id="pizzaSlice{{i}}" class="hold" *ngFor="let i of [1,2,3,4,5,6,7,8]" [ngClass]="{'selected': this.groupsService.getSlicesNum(this.groupsService.SelectedGroup) >= i}"><div class="pizza"></div></div>
+    <div class="innerCircle"><div class="content">{{this.groupsService.getSlicesNum(this.groupsService.SelectedGroup)}}/8</div></div>
+  </div>
+  
