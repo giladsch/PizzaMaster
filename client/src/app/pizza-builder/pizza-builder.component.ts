@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { personInOrder, PizzaBuilderService } from './pizza-builder.service';
+import { GroupsService } from '../groups.service';
  
 @Component({
   selector: 'app-pizza-builder',
@@ -8,7 +9,7 @@ import { personInOrder, PizzaBuilderService } from './pizza-builder.service';
 })
 export class PizzaBuilderComponent implements OnInit {
 Arr = Array;
-  constructor(public pizzaBuilderService: PizzaBuilderService) { }
+  constructor(public groupsService: GroupsService) { }
 
   ngOnInit() {
   }
