@@ -38,7 +38,7 @@ export class GroupsService {
   private GetAllGroups(): IGroup[]{
     //getting groups
     const mock: IGroup = {
-      buyingUsers: [{name:"סהר", slices: 4},{name:"סהר", slices: 4}],
+      buyingUsers: [{name:"סהר", slices: 1},{name:"איתי", slices: 4}],
       expireDate: new Date(),
       name: "סהר המלך",
       location: LocationsEnum.PazGaz
