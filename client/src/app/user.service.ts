@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {cloneDeep} from 'lodash'
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ export class UserService {
   constructor() {}
   public Initialized = false;
 
+  public IsLoading = false;
   public currentUser: IUser ={
     name: "",
     location: null
@@ -16,11 +17,20 @@ export class UserService {
 
 
   public InitUser(name: string, location: LocationsEnum){
+    this.IsLoading = true;
     this.currentUser.name = name;
     this.currentUser.location = location;
-    this.Initialized = true;
-    console.log("connected:");
-    console.log(this.currentUser);
+    setTimeout(()=>{
+      this.Initialized = true;
+      this.IsLoading = false;
+    },7000)
+
+
+
+  }
+
+  public GetIsLoading(){
+    return this.IsLoading;
   }
 
   public GetCurrentUser(): IUser{

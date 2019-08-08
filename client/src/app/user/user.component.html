@@ -1,4 +1,4 @@
-<div class="login-container" *ngIf="!userService.Initialized">
+<div class="login-container" *ngIf="!userService.Initialized && !userService.IsLoading">
 
   <mat-form-field>
     <input [(ngModel)]="name" matInput type="text" placeholder="שם מלא">
@@ -13,5 +13,5 @@
   </mat-form-field>
   <button mat-button (click)="Connect()">התחבר</button>
 
-
 </div>
+<app-pizza-loader *ngIf="userService.GetIsLoading()"></app-pizza-loader>

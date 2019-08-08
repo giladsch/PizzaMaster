@@ -18,7 +18,6 @@ export class UserComponent implements OnInit {
 
   public Connect(){
     this.userService.InitUser(this.name, this.location)
-
   }
 
 

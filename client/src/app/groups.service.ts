@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {LocationsEnum} from './user.service';
+import {IUser, LocationsEnum} from './user.service';
 import {reduce} from 'lodash';
 
 @Injectable({
@@ -11,6 +11,17 @@ export class GroupsService {
 
   constructor() {
     this.groups = this.GetAllGroups();
+  }
+
+  public JoinToGroup(group: IGroup, user: IUser, slices: number):number{
+    let used = slices;
+    let slicesLeft = 8 - this.getSlicesNum(group) - slices;
+    if(slicesLeft < 0){
+      const abs = Math.abs(slicesLeft);
+      used = slices - abs;
+    }
+    group.buyingUsers.push({name: user.name,slices:used});
+    return used;
   }
 
   private GetAllGroups(): IGroup[]{
@@ -63,7 +74,7 @@ export class GroupsService {
   }
 }
 
-interface IGroup {
+export interface IGroup {
   name: string,
   location: LocationsEnum
   expireDate: Date,
