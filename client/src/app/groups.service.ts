@@ -31,7 +31,7 @@ export class GroupsService {
     setTimeout(()=>{
       this.isGroupSelected = true;
       this.userService.IsLoading = false;
-    },4000)
+    },3000)
 
     return used;
   }
