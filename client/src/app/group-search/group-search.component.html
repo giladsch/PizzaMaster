@@ -13,11 +13,14 @@
     <div class="name-container">
       <span>שלום {{userService.GetCurrentUser().name}}</span>
     </div>
-    <span>כמה חתיכות תרצה?</span>
-    
-    <div class="slider-container">
-      <div>
-        <igx-slider id="slider" [type]="sliderType.RANGE" [minValue]="1" [maxValue]="7" [lowerBound]="1" [upperBound]="10" [(ngModel)]="sliceRange"></igx-slider>
+
+    <div class="slider-component-container">
+      <span class="some-shit">מספר משולשי פיצה רצוי:</span>
+      
+      <div class="slider-container">
+        <div>
+          <igx-slider id="slider" [type]="sliderType.RANGE" [minValue]="1" [maxValue]="7" [lowerBound]="1" [upperBound]="10" [(ngModel)]="sliceRange"></igx-slider>
+        </div>
       </div>
     </div>
   </div>

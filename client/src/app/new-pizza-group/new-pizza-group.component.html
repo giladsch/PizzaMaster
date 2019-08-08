@@ -10,9 +10,9 @@
     </div>
 
     <div class="sliderContainer">
-      <b class="sliderHeader" >מספר משולשים התחלתי:</b>
+      <b class="sliderHeader" >מספר משולשים התחלתי: {{getSliderValue()}}</b>
       <div class="sliderLine">
-        <igx-slider id="slider" [minValue]="1" [maxValue]="800" [continuous]=true [(ngModel)]="startNumberOfSlices" ></igx-slider>
+        <igx-slider id="slider" [minValue]="100" [maxValue]="700" [continuous]=true [(ngModel)]="startNumberOfSlices" ></igx-slider>
       </div>
     </div>
     <div class="fieldsContainer">

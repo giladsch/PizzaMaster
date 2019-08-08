@@ -19,6 +19,10 @@ export class NewPizzaGroupComponent implements OnInit {
   ngOnInit() {
   }
 
+  public getSliderValue() {
+    return Math.floor(this.startNumberOfSlices / 100);
+  }
+
   public getLocationHebrewName(englishName: string) {
     if (englishName == "PazGaz") {
       return "פז גז"; 
