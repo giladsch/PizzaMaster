@@ -17,8 +17,11 @@ export class GroupSearchComponent implements OnInit {
     upper: 3
   };
 
+
+
   public JoinToGroup(group:IGroup){
     this.groupService.JoinToGroup(group,this.userService.GetCurrentUser(),this.sliceRange.upper)
+    this.userService.IsLoading = true;
   }
 
   public volume = 4;

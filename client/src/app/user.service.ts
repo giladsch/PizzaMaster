@@ -23,7 +23,7 @@ export class UserService {
     setTimeout(()=>{
       this.Initialized = true;
       this.IsLoading = false;
-    },500)
+    },5000)
 
 
 

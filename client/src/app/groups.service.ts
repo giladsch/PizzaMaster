@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {IUser, LocationsEnum} from './user.service';
+import {IUser, LocationsEnum, UserService} from './user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class GroupsService {
   private isGroupSelected = false;
   public SelectedGroup: IGroup;
 
-  constructor() {
+  constructor(private userService: UserService) {
     this.groups = this.GetAllGroups();
   }
 
@@ -25,11 +25,14 @@ export class GroupsService {
       used = slices - abs;
     }
     group.buyingUsers.push({name: user.name,slices:used});
-    this.isGroupSelected = true;
     this.SelectedGroup = group;
+    setTimeout(()=>{
+      this.isGroupSelected = true;
+      this.userService.IsLoading = false;
+    },4000)
+
     return used;
   }
-
   private GetAllGroups(): IGroup[]{
     //getting groups
     const mock: IGroup = {
