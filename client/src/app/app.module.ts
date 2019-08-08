@@ -10,6 +10,8 @@ import { IgxInputGroupModule, IgxSliderModule } from 'igniteui-angular';
 import { NewPizzaGroupComponent } from './new-pizza-group/new-pizza-group.component';
 import { MatSliderModule } from '@angular/material';
 import { PizzaLoaderComponent } from './pizza-loader/pizza-loader.component';
+import { PizzaOrderComponent } from './pizza-order/pizza-order.component';
+import { PizzaSlicesLeftComponent } from './pizza-slices-left/pizza-slices-left.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PizzaLoaderComponent } from './pizza-loader/pizza-loader.component';
     UserComponent,
     GroupSearchComponent,
     NewPizzaGroupComponent,
-    PizzaLoaderComponent
+    PizzaLoaderComponent,
+    PizzaOrderComponent,
+    PizzaSlicesLeftComponent
   ],
   imports: [
     MatSliderModule,
