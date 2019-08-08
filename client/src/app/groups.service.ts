@@ -36,37 +36,37 @@ export class GroupsService {
   private GetAllGroups(): IGroup[]{
     //getting groups
     const mock: IGroup = {
-      buyingUsers: [{name:"סהר", slices: 4}],
+      buyingUsers: [{name:"סהר", slices: 4},{name:"סהר", slices: 4}],
       expireDate: new Date(),
       name: "סהר המלך",
       location: LocationsEnum.PazGaz
     };
     const mock2: IGroup = {
-      buyingUsers: [{name:"סהר", slices: 3}],
+      buyingUsers: [{name:"סהר", slices: 3},{name:"סהר", slices: 4}],
       expireDate: new Date(),
       name: "לאביה חם",
       location: LocationsEnum.PazGaz
     };
     const mock3: IGroup = {
-      buyingUsers: [{name:"סהר", slices: 6}],
+      buyingUsers: [{name:"גיבור", slices: 2},{name:"סהר", slices: 1},{name:"עדיאל", slices: 1}],
       expireDate: new Date(),
       name: "גידי אחלה",
       location: LocationsEnum.PazGaz
     };
     const mock4: IGroup = {
-      buyingUsers: [{name:"סהר", slices: 1}],
+      buyingUsers: [{name:"מירון", slices: 6},{name:"אלמוג", slices: 1}],
       expireDate: new Date(),
       name: "אבי סבבה",
       location: LocationsEnum.PazGaz
     };
     const mock5: IGroup = {
-      buyingUsers: [{name:"סהר", slices: 3}],
+      buyingUsers: [{name:"איתי", slices: 3},{name:"סהר", slices: 1}],
       expireDate: new Date(),
       name: "נופר מורל",
       location: LocationsEnum.PazGaz
     };
     const mock6: IGroup = {
-      buyingUsers: [{name:"סהר", slices: 2},{name:"גידי", slices: 3}],
+      buyingUsers: [{name:"אלון", slices: 1},{name:"גידי", slices: 3},{name:"סהר", slices: 2}],
       expireDate: new Date(),
       name: "נוי משהו",
       location: LocationsEnum.PazGaz
