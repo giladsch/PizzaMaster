@@ -26,7 +26,7 @@
     "hammerjs": "^2.0.8",
     "igniteui-angular": "^8.1.2",
     "jszip": "^3.1.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "oracledb": "^4.0.0",
     "paper-range-slider": "^3.0.0",
     "rxjs": "~6.4.0",
